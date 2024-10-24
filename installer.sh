@@ -8,7 +8,7 @@ echo  -e "
 open source project installer
 "
 
-echo "Instalando pnpm..."
+echo "Checking if pnpm is installed..."
 
 if ! command -v pnpm &> /dev/null
 then
@@ -26,7 +26,7 @@ then
     then
         echo "[✅] pnpm installed successfully"
     else
-        echo "[X] Failed to install pnpm."
+        echo "[ X ] Failed to install pnpm."
         exit 1
     fi
 else
