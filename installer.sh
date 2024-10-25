@@ -32,9 +32,21 @@ then
 else
     echo '[✅] pnpm already installed'
 fi
-# Import dependencies
-echo "Importing dependencies..."
-pnpm import
+# check if nodejs and typescript is installed
+
+if ! command -v node &> /dev/null
+then
+    echo "[ ! ] nodejs is not installed. please install nodejs first"
+    exit 1
+fi
+
+if ! command -v typescript &> /dev/null
+then
+    echo "[ ! ] typescript is not installed. installing typescript..."
+    npm install -g typescript
+fi
+
+
 
 # Install dependencies
 echo "Installing dependencies..."

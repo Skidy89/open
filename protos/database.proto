@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package database;
+
+message user {
+    // create ur own db
+    string name = 1;
+    bool banned = 2;
+    int32 age = 3;
+    
+}
+message chat {
+    // create ur own db
+    bool banned = 1;
+    bool welcome = 2;
+}
+
+message config {
+    // create ur own db
+    bool autoRead = 1;
+}
+
+message collection {
+    map<string, user> users = 1;
+    map<string, chat> chats = 2;
+    map<string, config> settings = 3;
+}
