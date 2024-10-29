@@ -1,2 +1,5 @@
 node_modules
 dist
+auth.db
+auth.db-shm
+auth.db-wal

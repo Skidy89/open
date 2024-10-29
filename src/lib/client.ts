@@ -11,13 +11,9 @@ export class WASocket {
     }
     private async init(config: UserFacingSocketConfig):  Promise<WASocket> {
         let socket: socket | null = makeWASocket(config)
-        try {
-            await Object.assign(this, socket)
+        await Object.assign(this, socket)
         
         return this
-    } finally {
-        socket = null
-    }
     }
     public async fetchGroup (jid: string) {
         const cached = groupMetadata.get(jid)

@@ -21,7 +21,7 @@
   "dependencies": {
     "@cacheable/node-cache": "^1.4.0",
     "@hapi/boom": "^10.0.1",
-    "@skidy89/baileys": "^6.7.8",
+    "@skidy89/baileys": "6.8.3",
     "@skidy89/mysql-baileys": "^0.0.8",
     "chalk": "^4.1.2",
     "js-sieve": "^0.0.4",
